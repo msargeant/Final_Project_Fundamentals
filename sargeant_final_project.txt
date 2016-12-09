@@ -1,0 +1,154 @@
+1. PROBLEM STATEMENT: I would like to create a action adventure game based on
+dungeons & dragons where you can use a random number generator within a function
+to simulate dice and allow a player to choose their own adventure through
+the use of a number or text system. This program will allow the player to start
+with an initial amount of hitpoints, and will allow the character to make a 
+number of different choices more than one of which will allow them to beat the 
+game. This game will allow for randomly generated combat which will either end
+in the character dying and having to start over or defeating an enemy and 
+continueing the adventure. The player will be prompted for what they want to do.
+The player will be given a back story and setting and then will be asked what they
+would like to do in that situation. 
+
+Nouns:game, random number generator, dice, player, adventure, number system, 
+text system, hitpoints, choices, randomly generated combat, defeating, enemy,
+back story, setting, situation.
+
+Verbs:create, simulate, choose, start, make choices, beat the game, dying, 
+start over, defeating an enemy, continuing, prompted, given, asked
+
+2. Defining Diagram
+
+INPUTS: 
+  characterName
+  choice
+
+
+PROCESSING:
+  prompt for characterName
+  display current hit points
+  display back story
+  display setting
+  display choices
+  prompt for choice
+  display the next script based on choice
+  loop through battle sequence
+  display battle choices
+  roll d20 to see if player hits enemy
+  roll d8 if the player hits to do damage
+  calculate the enemies new hitpoint status
+  roll d20 for enemy to see if they hit character
+  roll d6 to see how much damage the enemy does to the character
+  calculate players new hitpoint status
+  
+  
+
+OUTPUTS:
+  display back story
+  display setting
+  display choices
+  display new script based on choice
+  display battle choices
+  display player's hit points
+  display player death
+  display enemy death
+  display ending script
+  
+
+
+
+
+3. Solution Algorithm
+  RollD20()
+    initialize result to 0
+    convert result to number
+    result = rand(1-20)
+    return result    
+  END
+
+  RollD8()
+    initialize result to 0
+    convert result to number
+    result = rand(1-8)
+    return result    
+  END
+
+  RollD6()
+    initialize result to 0
+    convert result to number
+    result = rand(1-6)
+    return result    
+  END
+  
+  Main
+  
+    initialize characterName = ""
+    initialize characterHitPoints = 0
+    initialize enemyHitPoints = 0
+    initialize choice = 0
+    
+    prompt for characterName with "What is your character's name?"
+    
+    display starter back story
+    display first choices
+    
+    prompt for choice
+    
+    diplay cooresponding text for the choice
+    
+    diplay next choice
+    
+    prompt for next decision
+    
+    Display "You have beaten the game!"
+    
+    or
+    
+    Display "You have died"
+    prompt "Would you like to start over?"
+    
+  END
+    
+    
+    
+4. Check the Solution Algorithm
+  TEST CASE 1: 
+    Input Values:
+    
+    
+    Expected Results:
+    
+    
+    Actual Results:
+    
+  TEST CASE 2: 
+    Input Values:
+    
+    
+    Expected Results:
+    
+    
+    Actual Results:
+    
+    
+  TEST CASE 3: 
+    Input Values:
+    
+    
+    Expected Results:
+    
+    
+    Actual Results:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
