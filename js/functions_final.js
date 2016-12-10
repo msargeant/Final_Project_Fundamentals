@@ -150,6 +150,24 @@
         
       }
       
+      function choice4(){
+
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>You quickly without losing a beat cowardly dash out the back door.<br>The orc and the wizard take your girlfriend on a pair of horses and ride out of town.</fieldset>";
+        
+      document.getElementById("picture").innerHTML = "<img src=\"images/outside1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+      document.getElementById("narrator").innerHTML = "";
+
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case1();\">1. I am a really good person and I have done nothing to harm you!</section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case2();\">2. I know where my master keeps all of his most valueable items.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case3();\">3. I want to join you and plunder for riches.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case4();\">4. You will not get any sick pleasure from me, having me plead for my life, do your worst foul wizard!</section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case5();\">5. I challenge you to a game of witts!</section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case5();\">6. I challenge you to a game of witts!</section>";
+      
+        
+      }
+      
       function choice5(){
         
       document.write("<br><fieldset><strong>II.</strong> You attempt to fight the orc with your bare hands.</fieldset><br>");
