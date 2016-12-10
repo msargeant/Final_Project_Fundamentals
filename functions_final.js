@@ -152,18 +152,18 @@
       
       function choice4(){
         
-        document.getElementById("narrator").innerHTML = "II. You quickly without losing a beat cowardly dash out the back door.<br>The orc and the wizard take your girlfriend on a pair of horses and ride out of town.<br><br>What do you do now?";
+        document.getElementById("narrator2").innerHTML = "II. You quickly without losing a beat cowardly dash out the back door.<br>The orc and the wizard take your girlfriend on a pair of horses and ride out of town.";
           
-        document.getElementById("picture").innerHTML = "<img src=\"images/wizard.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+        document.getElementById("picture").innerHTML = "<img src=\"images/outside1.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
 
-        document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>The wizard looks un-moved by your ernest pleas, but for a moment suddenly looks as if he has an idea and smiles a most devious smile.<br><br>Wizard: Give me a good reason why I should not disintigrate you where you stand?<br></fieldset>";
+        document.getElementById("narrator").innerHTML = "<fieldset><strong></strong><br><h1>What do you do now?</h1></fieldset>";
         
-        document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice3Case1();\"><h1>What do you say? (click the text)</h1><br><br>1. I am a really good person and I have done nothing to harm you!</section>";
-        document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice3Case2();\">2. I know where my master keeps all of his most valueable items.</section>";
-        document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice3Case3();\">3. I want to join you and plunder for riches.</section>";
-        document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice3Case4();\">4. You will not get any sick pleasure from me, having me plead for my life, do your worst foul wizard!</section>";
-        document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice3Case5();\">5. I challenge you to a game of witts!</section>";
-        document.getElementById("Choice6").innerHTML = "";
+        document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case1();\">1. Try to follow the horse tracks to track down the orc and wizard.</section>";
+        document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case2();\">2. Wait till you now for certain that the orc and wizard are gone and then re-enter the blacksmith shop.</section>";
+        document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case3();\">3. Go to the bread maker to see if he knows anything about this wizard and orc.</section>";
+        document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case4();\">4. Go to the local calvary men to see if they can go defeat the wizard and orc, and save your girlfriend.</section>";
+        document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case5();\">5. Go to the local tavern to see if they know anything about the wizard and orc.</section>";
+        document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case6();\">6. Go back to your house to see if you can find anything that may help you in finding your girlfriend.</section>";
                 
       }
       
