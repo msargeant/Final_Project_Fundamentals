@@ -150,6 +150,23 @@
         
       }
       
+      function choice4(){
+        
+        document.getElementById("narrator").innerHTML = "II. You quickly without losing a beat cowardly dash out the back door.<br>The orc and the wizard take your girlfriend on a pair of horses and ride out of town.<br><br>What do you do now?";
+          
+        document.getElementById("picture").innerHTML = "<img src=\"images/wizard.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+
+        document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>The wizard looks un-moved by your ernest pleas, but for a moment suddenly looks as if he has an idea and smiles a most devious smile.<br><br>Wizard: Give me a good reason why I should not disintigrate you where you stand?<br></fieldset>";
+        
+        document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice3Case1();\"><h1>What do you say? (click the text)</h1><br><br>1. I am a really good person and I have done nothing to harm you!</section>";
+        document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice3Case2();\">2. I know where my master keeps all of his most valueable items.</section>";
+        document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice3Case3();\">3. I want to join you and plunder for riches.</section>";
+        document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice3Case4();\">4. You will not get any sick pleasure from me, having me plead for my life, do your worst foul wizard!</section>";
+        document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice3Case5();\">5. I challenge you to a game of witts!</section>";
+        document.getElementById("Choice6").innerHTML = "";
+                
+      }
+      
       function choice5(){
         
       document.write("<br><fieldset><strong>II.</strong> You attempt to fight the orc with your bare hands.</fieldset><br>");
