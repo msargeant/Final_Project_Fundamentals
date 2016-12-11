@@ -270,6 +270,9 @@
       document.getElementById("Choice4").innerHTML = "";
       document.getElementById("Choice5").innerHTML = "";
       document.getElementById("Choice6").innerHTML = "";
+      
+      document.write("<fieldset><strong>IV.</strong>You quickly grab the enchanted sword and shield and attack the wizard!</fieldset>");
+      
       damage = 12;
       armorClass = armorClass - 5;
       combat2(hitPoints, damage, armorClass, saveVSSpell);      
@@ -289,6 +292,8 @@
       document.getElementById("Choice5").innerHTML = "";
       document.getElementById("Choice6").innerHTML = "";
 
+      document.write("<fieldset><strong>IV.</strong>You: Okay now that I have shown you where these items are now you will let me go right?<br><br>Wizard: It seems that I have had one of my characteristic changes of heart. Get him Snorg!</fieldset>");
+      
       combat1(hitPoints, damage, armorClass, saveVSSpell);      
         
       }
