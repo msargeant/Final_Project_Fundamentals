@@ -152,6 +152,12 @@
       
       function choice4(){
 
+
+      audio.pause();
+      
+      audio3.play();
+      
+      
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>You quickly without losing a beat cowardly dash out the back door.<br>The orc and the wizard take your girlfriend on a pair of horses and ride out of town.</fieldset>";
         
       document.getElementById("picture").innerHTML = "<img src=\"images/outside1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
@@ -165,11 +171,7 @@
       document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case5();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
       document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case6();\">6. Go to the local bread maker to see if they know anything about the orc and wizard.</section>";
       
-      var audio3 = new Audio('music/outsideMusic2.mp3');
 
-      audio.pause();
-      
-      audio3.play();
         
       }
       
@@ -180,22 +182,144 @@
         chest = true;
 
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>Once the orc and wizard are out of site you return to the black smith shop where your master was slain and while looking around you find a chest in the back room which contains a finely crafted long sword and shield. You swear to avenge your master's death and get your girlfriend back with the help of these new items.</fieldset>";
-      
-      
-
 
       document.getElementById("picture").innerHTML = "<img src=\"images/chest1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
 
       document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
-      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case6();\">1. Go to the local bread maker to see if they know anything about the orc and wizard. </section>";
-      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case5();\">2. Wander aimlessly through town wondering how you could have let this happen.</section>";
-      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case3();\">3. Go to the local calvary men to see if they can help with your situation.</section>";
-      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case4();\">4. Go to the local tavern and see if they can tell you anything about the orc and wizard.</section>";
-      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case2();\">5. Go the direction you saw the orc and wizard go on their horses and try to track them.</section>";
-      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case5();\"></section>"; 
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case1Case1();\">1. Go to the local bread maker to see if they know anything about the orc and wizard. </section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case1Case2();\">2. Wander aimlessly through town wondering how you could have let this happen.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case1Case3();\">3. Go to the local calvary men to see if they can help with your situation.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case1Case4();\">4. Go to the local tavern and see if they can tell you anything about the orc and wizard.</section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\">5. Go the direction you saw the orc and wizard go on their horses and try to track them.</section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>"; 
+      }
+      
+      function choice4Case2(){
+
+        damage = 12;
+        armorClass = armorClass - 4;
+        chest = true;
+
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You run after them though their horses are far quicker than you are. You do manage to follow the track to an old scary cottage far outside of town deep inside the crohn wood.</fieldset>";
+      
+      
+
+
+      document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+      document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case2Case1();\">1. Go peak in the window. </section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case2Case2();\">2. Go and attempt to steal the horses from the post they are tied upon.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case2Case3();\">3. Charge in demanding for them to release your girlfriend.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case1Case4();\"></section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>"; 
       }
 
+      function choice4Case3(){
+
+        document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>Calvary Man: What is it citizen?<br><br>You: An orc and a wizard killed my master blacksmith and took my girlfriend out of town. <br><br>Calvary Man: Out of town eh!? Well that means we can't do anything for you, because that is too far out of our jurisdiction. <br><br>You: But there has been an attack and a kidnapping, why won't you do anything?<br><br>Calvary man: I wish I could but I am on my break.<br><br>You: Okay I see how it is, you guys are the worst calvary men ever!</fieldset>";
+        
+        document.getElementById("picture").innerHTML = "<img src=\"images/guard1.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+
+        document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+        document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case3Case1();\">1. Go to the blacksmith shop and search for items.</section>";
+        document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case3Case2();\">2. Attempt to follow their track out of town.</section>";
+        document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case3Case3();\">3. Wander aimlessly through town wondering how you could have let this happen.</section>";
+        document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case3Case4();\">4. Go to the local tavern and see if they can tell you anything about the orc and wizard.</section>";
+        document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case3Case5();\"></section>";
+        document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case3();\"></section>";
+      }
+      
+      function choice4Case4(){
+
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>As you enter the tavern the scent of barley and hops asail your nostrols. You make your way to the bar tender and tell him of your ordeal. He remarks that those two had make frequent visits to his tavern and would cause more trouble than they were worth. He hands you a ring and says that a wandering adventurer left this here last night, he tells you to take in the hopes that you can get rid of the orc and wizard so that they will no longer torment his tavern.<br><br>As you slide on the ring you feel your vitality increase considerably. You feel you could take much more damage than before.</fieldset>";
+        
+      document.getElementById("picture").innerHTML = "<img src=\"images/tavern3.jpg\" alt=\"adventure photo\" width=\"380\" height=\"265\">";
+
+      document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case4Case1();\">1. Go to the blacksmith shop and search for items.</section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case4Case2();\">2. Attempt to follow their track out of town.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case4Case3();\">3. Go to the local calvary men to see if they can help with your situation.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case4Case4();\">4. Go to the local bread maker to see if they know anything about the orc and wizard.</section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case4Case5();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case4();\"></section>";
+      
+      hitPoints = 30;
+      
+
+      audio3.pause();
+      
+      audio4.play();
+        
+      }
+      
+      function choice4Case5(){
+
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>As you are wandering through the streets feeling bad about yourself wondering how this could have happened, and considerably upset about the whole situation. You see a large rat eating something on the side of the road.</fieldset>";
+        
+      document.getElementById("picture").innerHTML = "<img src=\"images/tavern3.jpg\" alt=\"adventure photo\" width=\"380\" height=\"265\">";
+
+      document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case4Case1();\">1. Throw a rock at the rat.</section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case4Case2();\">2. Chase the rat and try to catch it.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case4Case3();\">3. Ignore the rat and continue walking down the road feeling bad about your situation.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case4Case4();\">4. Try to befriend the rat with a piece of cheese.</section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case4Case5();\">5. Try to befriend the rat with a piece of bread.</section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case4();\"></section>";
+      
+      hitPoints = 30;
+      
+
+      audio3.pause();
+      
+      audio4.play();
+        
+      }
+
+      function choice4Case6(){
+        saveVSSpell = 20;
+        
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You tell your terrifying tale to the bread maker, who is shocked to hear it. <br><br>Bread Maker: That is quite a tale young apprentice while there is nothing I can do personally since I am merely a simple bread maker but I did acquire this magical helmet from my grandfather. He told me that it would protect me from magical spells hopefully you will be able to find a use for it.</fieldset>";
+      
+      document.getElementById("picture").innerHTML = "<img src=\"images/helmet1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+      document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case1();\">1. Go to the blacksmith shop and search for items.</section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case2();\">2. Attempt to follow their track out of town.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case3();\">3. Go to the local calvary men to see if they can help with your situation.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case4();\">4. Go to the local tavern and see if they can tell you anything about the orc and wizard.</section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case5();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case6();\"></section>";
+
+        
+      }      
+      
+      function choice4Case1Case1(){
+        saveVSSpell = 20;
+        
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You tell your terrifying tale to the bread maker, who is shocked to hear it. <br><br>Bread Maker: That is quite a tale young apprentice while there is nothing I can do personally since I am merely a simple bread maker but I did acquire this magical helmet from my grandfather. He told me that it would protect me from magical spells hopefully you will be able to find a use for it.</fieldset>";
+      
+      document.getElementById("picture").innerHTML = "<img src=\"images/helmet1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+      document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+      document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case1Case1();\">1. Wander aimlessly through town wondering how you could have let this happen.</section>";
+      document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case1Case2();\">2. Go to the local calvary men to see if they can help with your situation.</section>";
+      document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case1Case3();\">3. Go to the local tavern and see if they can tell you anything about the orc and wizard.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case1Case4();\">4. Go the direction you saw the orc and wizard go on their horses and try to track them.</section>";
+      document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
+      document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>"; 
+
+        
+      }
+      
       function choice5(){
 
       document.write("<br><fieldset><strong>II.</strong> You attempt to fight the orc with your bare hands.</fieldset><br>");
@@ -391,7 +515,6 @@
           document.getElementById("Choice5").innerHTML = "";
           document.getElementById("Choice6").innerHTML = "";          
 
-        var audio2 = new Audio('endMusic.mp3');
 
         audio.pause();
         
@@ -439,7 +562,6 @@
             document.getElementById("Choice5").innerHTML = "";
             document.getElementById("Choice6").innerHTML = "";          
 
-          var audio2 = new Audio('endMusic.mp3');
 
           audio.pause();
           
@@ -476,8 +598,6 @@
             document.getElementById("Choice4").innerHTML = "";
             document.getElementById("Choice5").innerHTML = "";
             document.getElementById("Choice6").innerHTML = "";          
-
-          var audio2 = new Audio('endMusic.mp3');
 
           audio.pause();
           
@@ -552,6 +672,9 @@
       
       
       function death(){
+        document.write("<h1>You have Died</h1><br>");
+        document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
+        document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>")
         alert("You have died. Please try again. (press back on the browser to start over)");
       }
       
