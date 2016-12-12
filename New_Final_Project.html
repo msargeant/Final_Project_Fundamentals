@@ -18,6 +18,7 @@
       var damage = 4;
       var saveVSSpell = 10;
       var chest = false;
+      var run = false;
       var audio = new Audio('music/battleMusic5.mp3');
       var audio2 = new Audio('music/endMusic.mp3');
       var audio3 = new Audio('music/outsideMusic2.mp3');
@@ -45,7 +46,8 @@
       
       
       //output to the screen the necessary information
-
+      //frame for most the pages with choices, pictures, and narration
+      document.write("<p id=\"stats\"></p>");
 
 
       document.write("<p id=\"narrator2\"></p>");
@@ -67,6 +69,9 @@
       
       
       //output source for this frame
+      
+      document.getElementById("stats").innerHTML = "Hit Points = " + hitPoints + "<br>Armor Class = " + armorClass + "<br>Save VS Spell = " + saveVSSpell + "<br>Damage = " + damage + "<br>";
+      
       document.getElementById("picture").innerHTML = "<img src=\"images/blacksmith.jpg\" alt=\"adventure photo\" width=\"644\" height=\"250\">";
       
       document.getElementById("narrator").innerHTML = "<fieldset><strong>I.</strong> You are are finished working as an apprentice in your local blacksmith shop.<br>As he quenches the last peice of iron at the end of the day<br>you notice your girlfriend enter the door. <br>She hugs you, kisses your cheek,<br>and says that she is glad that you are finally done working. <br>No sooner than the final piece of metal is cooled <br>a large orc and a wizard in a red robe barge in through blacksmith shop door. <br>The orc deals a deadly blow to your master, while the wizard appears to start casting a spell.<br> The Orc turns to your girlfriend and grabs her as if he intends to take her with him...</fieldset> <br>";
