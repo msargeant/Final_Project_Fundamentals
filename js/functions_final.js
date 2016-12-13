@@ -344,6 +344,12 @@
 
   function cottage(){
 
+      if(audio4){
+      audio4.pause();
+      audio3.play();
+    }
+
+  
     if(run){  
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You run after them though their horses are far quicker than you are. You do manage to follow the track to an old scary cottage far outside of town deep inside the crohn wood.</fieldset>";
 
@@ -381,6 +387,132 @@
  
     
   }
+  
+  function cottageChoice2(){
+    document.write("<br><fieldset><strong>IV:</strong>As you go to untie the horses from the post, the cottage door sudenly flies open and the orc and wizard rush in and attack.</fieldset><br>");
+
+    combat1(hitPoints, damage, armorClass, saveVSSpell);        
+  }
+  
+  function cottageChoice3(){
+    document.write("<br><fieldset><strong>IV:</strong> You barge into the cottage through the front door where the orc and wizard are standing and waiting for you.</fieldset><br>");
+
+    combat1(hitPoints, damage, armorClass, saveVSSpell);        
+  }
+
+  function cottageChoice4(){
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Waiting in a well hidden spot about an hour passes when the orc and wizard exit the cottage get on their horses and ride toward town. You do not see your girlfriend with them, so she must be inside somewhere.</fieldset>";
+    
+    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+    document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+    document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"door = true; cottageChoice4Case1();\">1. Enter through the door.</section>";
+    document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"windo = true; cottageChoice4Case1();\">2. Enter through the window.</section>";
+    document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice1Case3();\">3. Continue to wait till they return.</section>";
+    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice1Case4();\"></section>";
+    document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
+    document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
+      
+  }
+  
+  function cottageChoice4Case1(){
+    
+    if(door){
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Entreing through the door you see a sparsly furnished room with a table and two chairs. You see two paintings, one of a rosebud and the other of a castle. You notice footsteps leading to a barren wall. As you mutter to yourself about how do I open this door, you notice the reverberations of you voice has an effect on the door which indicates to you this must be a voice activated magical door. So if only you knew the right word you would be able to pass.</fieldset>";
+    document.getElementById("picture").innerHTML = "<img src=\"images/rosebud.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+
+    }
+    
+    if(windo){
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Entreing through the window you see a sparsly furnished room with a table and 2 chairs. You see two paintings, one of a rosebud and the other of a castle. You notice footsteps leading to a barren wall. As you mutter to yourself about how do I open this door, you notice the reverberations of you voice has an effect on the door which indicates to you this must be a voice activated magical door. So if only you knew the right word you would be able to pass.</fieldset>";
+    document.getElementById("picture").innerHTML = "<img src=\"images/castle1.jpg\" alt=\"adventure photo\" width=\"325\" height=\"400\">";
+      
+    }
+
+    document.getElementById("narrator").innerHTML = "<h1>Guess the secret password</h1>";
+
+    
+    document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"door = true; cottageChoice4Case1();\"></section>";
+    document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"window = true; cottageChoice4Case1();\"></section>";
+    document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice1Case3();\"></section>";
+    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice1Case4();\"></section>";
+    document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
+    document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
+      
+  
+  }
+  
+  function guessBox(){
+    
+
+    guessCount = guessCount + 1;
+    
+    document.write("<input id=\"guess\" type=\"text\">");
+    document.write("<input id=\"guess\" type=\"button\" onclick=\"check();\">");
+    
+    
+  }
+  
+  function check(){
+    var aGuess = document.getElementById("guess").value
+    bGuess = aGuess.toLowerCase();
+    
+    if(guessCount <= 3){
+      if(bGuess === "rosebud"){
+        //beat the game... ending screen
+        document.getElementById("stats").innerHTML = "";
+
+        document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>As you speak the word \"rosebud\" the magic holding the door closed suddenly disipates completely. You follow a small flight of stairs which leads to your girlfriend locked in a cage. You quickly break the lock and escape.</fieldset>";
+
+        document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+
+        
+        document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
+          
+
+        document.getElementById("Choice1").innerHTML = "";
+        document.getElementById("Choice2").innerHTML = "";
+        document.getElementById("Choice3").innerHTML = "";
+        document.getElementById("Choice4").innerHTML = "";
+        document.getElementById("Choice5").innerHTML = "";
+        document.getElementById("Choice6").innerHTML = "";  
+        
+       
+        audio3.pause();
+        
+        audio2.play();
+
+        endGame();
+        
+      }else{
+            
+    if(door){
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>The door remains and is unaffected by that world. That was obviously not the right answer.</fieldset>";
+    document.getElementById("picture").innerHTML = "<img src=\"images/rosebud1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+    }
+    
+    if(windo){
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>The door remains and is unaffected by that world. That was obviously not the right answer.</fieldset>";
+    document.getElementById("picture").innerHTML = "<img src=\"images/castle1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+      
+    }
+
+    document.getElementById("narrator").innerHTML = "<h1>Guess the secret password</h1>";
+
+    guessBox();
+      }
+      
+      
+    }else{
+      document.write("You guess wrong for the third time when a beam of magical energy springs forth from the door and disintigrates you.")
+      death();
+    }
+    
+    
+  }
+
   
   function choice5(){
 
@@ -579,8 +711,6 @@
       document.getElementById("Choice5").innerHTML = "";
       document.getElementById("Choice6").innerHTML = "";  
       
-      //link to start over again
-      document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
       
 
 
