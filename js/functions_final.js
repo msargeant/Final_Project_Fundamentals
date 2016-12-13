@@ -174,6 +174,10 @@
   }
 
   function breadShop(){
+    if(audio4){
+      audio4.pause();
+      audio3.play();
+    }
     
     if(bread){
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>We are sorry to hear about your peril. Do please return in one piece.</fieldset>";
@@ -237,7 +241,13 @@
   }
 
   function wander(){
-    document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>As you are wandering through the streets feeling bad about yourself wondering how this could have happened, and considerably upset about the whole situation. You see a large rat eating something on the side of the road.</fieldset>";
+    
+    if(audio4){
+      audio4.pause();
+      audio3.play();
+    }
+    
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>As you are wandering through the streets feeling bad about yourself wondering how this could have happened, and considerably upset about the whole situation. You see a large disgusting rat scurrying through an alley way, but nothing of interst or value.</fieldset>";
       
     document.getElementById("picture").innerHTML = "<img src=\"images/village4.jpg\" alt=\"adventure photo\" width=\"380\" height=\"265\">";
 
@@ -253,6 +263,11 @@
   }
   
   function calvary(){
+    
+    if(audio4){
+      audio4.pause();
+      audio3.play();
+    }    
     
     if(guard){
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>Calvary Man: Hey I'm still on my break here so just keep walking.</fieldset>";
@@ -285,6 +300,13 @@
   }
   
   function blacksmithShop(){
+    
+    if(audio4 || audio3){
+      audio4.pause();
+      audio3.play();
+    }
+    
+    
     
     if(chest){
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>You look through all of your masters things but find only typical swords.</fieldset>";
@@ -322,26 +344,43 @@
 
   function cottage(){
 
-  if(run){  
-  document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You run after them though their horses are far quicker than you are. You do manage to follow the track to an old scary cottage far outside of town deep inside the crohn wood.</fieldset>";
+    if(run){  
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You run after them though their horses are far quicker than you are. You do manage to follow the track to an old scary cottage far outside of town deep inside the crohn wood.</fieldset>";
 
-  }else{
-  document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You do manage to follow the track to an old scary cottage far outside of town deep inside the crohn wood.</fieldset>";
+    }else{
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You do manage to follow the track to an old scary cottage far outside of town deep inside the crohn wood.</fieldset>";
 
-  }
-  
-  document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
-
-  document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
-
-  document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"choice4Case2Case1();\">1. Go peek in the window. </section>";
-  document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"choice4Case2Case2();\">2. Go and attempt to steal the horses from the post they are tied upon.</section>";
-  document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"choice4Case2Case3();\">3. Charge in demanding for them to release your girlfriend.</section>";
-  document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"choice4Case1Case4();\">4. Wait to see if there is any activity at this cottage.</section>";
-  document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
-  document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>"; 
+    }
     
-  }          
+    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+    document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+    document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"cottageChoice1();\">1. Go peek in the window. </section>";
+    document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"cottageChoice2();\">2. Go and attempt to steal the horses from the post they are tied upon.</section>";
+    document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice3();\">3. Charge in demanding for them to release your girlfriend.</section>";
+    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice4();\">4. Wait to see if there is any activity at this cottage.</section>";
+    document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
+    document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
+  }
+
+  function cottageChoice1(){
+
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>peeking in the window you see sparsly furnished living room with two chairs and a table. You also see two paintings one of a rosebud, and the other a castle. The orc and wizard soon emerge from a door in the wall which disappear before your eyes as the wizard casts a magic spell on it.</fieldset>";
+    
+    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+
+    document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
+
+    document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"cottageChoice1Case1();\">1. Barge in and demand entrance into the secret door. </section>";
+    document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"cottageChoice1Case2();\">2. Imitate the sound of a bird to distract and confuse them.</section>";
+    document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice1Case3();\">3. Go steal the horses that are tied up in the front.</section>";
+    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice1Case4();\">4. Hide and wait to see what they do.</section>";
+    document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
+    document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
+ 
+    
+  }
   
   function choice5(){
 
