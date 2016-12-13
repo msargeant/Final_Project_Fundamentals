@@ -17,8 +17,15 @@
       var armorClass = 8;
       var damage = 4;
       var saveVSSpell = 10;
+      
       var chest = false;
       var run = false;
+      var guard = false;
+      var bread = false;
+      var bar = false;
+      var shield = false;
+      var chainmail = false;
+      
       var audio = new Audio('music/battleMusic5.mp3');
       var audio2 = new Audio('music/endMusic.mp3');
       var audio3 = new Audio('music/outsideMusic2.mp3');
@@ -79,7 +86,7 @@
       document.getElementById("Choice1").innerHTML = "<section id=\"first\"  onclick=\"choice1();\"><h1>What do you do? (click the text)</h1><br><br>1. Grab the sword the master just finished making and attack the orc.</section>";
       document.getElementById("Choice2").innerHTML = "<section id=\"second\" onclick=\"choice2();\">2. Grab the sword the master just finished making and attack the wizard.</section>";
       document.getElementById("Choice3").innerHTML = "<section id=\"third\"  onclick=\"choice3();\">3. Plead with the orc and wizard to leave you alone.</section>";
-      document.getElementById("Choice4").innerHTML = "<section id=\"fourth\" onclick=\"choice4();\">4. Run out of the back door.</section>";
+      document.getElementById("Choice4").innerHTML = "<section id=\"fourth\" onclick=\"town();\">4. Run out of the back door.</section>";
       document.getElementById("Choice5").innerHTML = "<section id=\"fifth\"  onclick=\"choice5();\">5. Attack the orc.</section>";
       document.getElementById("Choice6").innerHTML = "<section id=\"sixth\"  onclick=\"choice6();\">6. Attack the wizard.</section>";
       
