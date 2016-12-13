@@ -181,7 +181,7 @@
     
     if(bread){
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>We are sorry to hear about your peril. Do please return in one piece.</fieldset>";
-      saveVSSpell = 20;
+
     }else{
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You tell your terrifying tale to the bread maker, who is shocked to hear it. <br><br>Bread Maker: That is quite a tale young apprentice while there is nothing I can do personally since I am merely a simple bread maker but I did acquire this magical helmet from my grandfather. He told me that it would protect me from magical spells hopefully you will be able to find a use for it.</fieldset>";
     saveVSSpell = 20;
@@ -227,7 +227,7 @@
     document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"blacksmithShop();\">1. Go back to the blacksmith shop and search for items.</section>";
     document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"cottage();\">2. Attempt to follow their track out of town.</section>";
     document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"calvary();\">3. Go to the local calvary men to see if they can help with your situation.</section>";
-    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"tavern();\">4. Go to the local bread maker to see if they know anything about the orc and wizard.</section>";
+    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"breadShop();\">4. Go to the local bread maker to see if they know anything about the orc and wizard.</section>";
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"wander();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"breadShop();\"></section>";
     
@@ -276,7 +276,7 @@
     }else{
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>Calvary Man: What is it citizen?<br><br>You: An orc and a wizard killed my master blacksmith and took my girlfriend out of town. <br><br>Calvary Man: Out of town eh!? Well that means we can't do anything for you, because that is too far out of our jurisdiction. <br><br>You: But there has been an attack and a kidnapping, why won't you do anything?<br><br>Calvary man: I wish I could but I am on my break.<br><br>You: Okay I see how it is, you guys are the worst calvary men ever!<br><br>Calvary man: Well I suppose I can give you this old suit of chain mail that nobody wants. Don't say I never tried to help.</fieldset>";
       
-      calvary = true;
+      guard = true;
       if(!chainmail){
         armorClass = armorClass - 5;
         chainmail = true;
@@ -551,7 +551,7 @@
       document.getElementById("picture").innerHTML = "<img src=\"images/riddle22.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
 
       
-      document.getElementById("narrator").innerHTML = "";
+      document.getElementById("narrator").innerHTML = "<h1>What is your answer</h1?";
         
 
       document.getElementById("Choice1").innerHTML = "<section id=\"first\"  onclick=\"choice3Case5Case4Case1();\">1. Life</section>";
@@ -561,6 +561,9 @@
       document.getElementById("Choice5").innerHTML = "<section id=\"fifth\"  onclick=\"choice3Case5Case4Case1();\">5. Anticipation</section>";
       document.getElementById("Choice6").innerHTML = "";       
     }else{
+      //beat the game... ending screen
+      document.getElementById("stats").innerHTML = "";
+
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: is it Darkness? <br><br>You: that is incorrect wizard you have lost this game of witts, now you must leave me and my girlfriend alone!<br><br>Wizard: Very well, but if I ever see you again I shall incinerate you where you stand. Come Snorg let's go.</fieldset>";
 
       document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
@@ -574,7 +577,11 @@
       document.getElementById("Choice3").innerHTML = "";
       document.getElementById("Choice4").innerHTML = "";
       document.getElementById("Choice5").innerHTML = "";
-      document.getElementById("Choice6").innerHTML = "";          
+      document.getElementById("Choice6").innerHTML = "";  
+      
+      //link to start over again
+      document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
+      
 
 
     audio.pause();
@@ -599,7 +606,7 @@
       document.getElementById("picture").innerHTML = "<img src=\"images/riddle3.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">";
 
       
-      document.getElementById("narrator").innerHTML = "";
+      document.getElementById("narrator").innerHTML = "<h1>Pick your answer</h1>";
         
       document.getElementById("Choice1").innerHTML = "<section id=\"first\"  onclick=\"choice3Case5Case4Case3Case1();\">1. Bird</section>";
       document.getElementById("Choice2").innerHTML = "<section id=\"second\"  onclick=\"choice3Case5Case4Case3Case2();\">2. Fish</section>";
@@ -608,6 +615,10 @@
       document.getElementById("Choice5").innerHTML = "<section id=\"fifth\"  onclick=\"choice3Case5Case4Case3Case1();\">5. Pleasure</section>";
       document.getElementById("Choice6").innerHTML = "";       
       }else{
+        //beat the game... ending page
+        document.getElementById("stats").innerHTML = "";
+
+        
         document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: Are you water elemental? <br><br>You: that is incorrect wizard you have lost this game of witts, now you must leave me and my girlfriend alone!<br><br>Wizard: Very well, but if I ever see you again I shall incinerate you where you stand. Come Snorg let's go.";
 
         document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
@@ -621,7 +632,11 @@
         document.getElementById("Choice3").innerHTML = "";
         document.getElementById("Choice4").innerHTML = "";
         document.getElementById("Choice5").innerHTML = "";
-        document.getElementById("Choice6").innerHTML = "";          
+        document.getElementById("Choice6").innerHTML = "";  
+
+        //link to start over again
+       document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
+
 
 
       audio.pause();
@@ -645,12 +660,16 @@
   
 
   function choice3Case5Case4Case3Case2(){
+    //beat the game ending sequence
+    document.getElementById("stats").innerHTML = "";
+
+    
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>You: Are you a fish?<br><br>Wizard: You are correct.<br><br>You: Okay now I have answered enough of your questions now you must leave me and my girlfriend be!<br><br>Wizard: Very well we shall leave you be, but do not let me catch in crohn wood. Let's go Snorg.";
 
     document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
 
     
-    document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
+    document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!<br>";
       
 
     document.getElementById("Choice1").innerHTML = "";
@@ -658,7 +677,11 @@
     document.getElementById("Choice3").innerHTML = "";
     document.getElementById("Choice4").innerHTML = "";
     document.getElementById("Choice5").innerHTML = "";
-    document.getElementById("Choice6").innerHTML = "";          
+    document.getElementById("Choice6").innerHTML = ""; 
+
+    //link to start again
+    document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
+
 
     audio.pause();
     
@@ -736,7 +759,7 @@
     document.write("<h1>You have Died</h1><br>");
     document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
     document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>")
-    alert("You have died. Please try again. (press back on the browser to start over)");
+    alert("You have died!");
   }
   
   
