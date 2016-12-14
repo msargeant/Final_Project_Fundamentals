@@ -733,9 +733,9 @@
 
     var guess = rollD20();
     guess = Number(guess);
-    if((guess + 14) >= 20){
+    if((guess + 17) >= 20){
                  
-      document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: Very well done I may not destroy you after all.<br><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br>Who makes it, has no need of it.<br>Who buys it, has no use for it.<br>Who uses it can neither see nor feel it.<br>What is it?<br>Wizard: hmmmm.. oh why that is obviously a coffin.<br> You: That is correct.<br>Wizard: Ha Ha, now you must answer me this...<br>If you have me, you want to share me. If you share me, you haven't got me. What am I?</fieldset>";
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: Very well done I may not destroy you after all.<br><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br><br>Who makes it, has no need of it.<br>Who buys it, has no use for it.<br>Who uses it can neither see nor feel it.<br><br>What is it?<br><br>Wizard: hmmmm.. oh why that is obviously a coffin.<br><br>You: That is correct.<br><br>Wizard: Ha Ha, now you must answer me this...<br><br>If you have me, you want to share me. <br>If you share me, you haven't got me. <br><br>What am I?</fieldset>";
 
       document.getElementById("picture").innerHTML = "<img src=\"images/riddle22.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
 
@@ -763,7 +763,7 @@
       document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
         
 
-      document.getElementById("Choice1").innerHTML = "";
+      document.getElementById("Choice1").innerHTML = "<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>";
       document.getElementById("Choice2").innerHTML = "";
       document.getElementById("Choice3").innerHTML = "";
       document.getElementById("Choice4").innerHTML = "";
@@ -774,9 +774,9 @@
       scroll(0,0);
 
       
-    audio.pause();
-    
-    audio2.play();
+      audio.pause();
+      
+      audio2.play();
     }
   }
 
@@ -791,7 +791,7 @@
     guess = Number(guess);
     if((guess + 18) >= 20){
                  
-      document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Wizard: Very impressive I did not think you looked like the intellectual type, I may even have some use for you.<br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br>Feed me and I live, yet give me a drink and I die.<br>What am I?<br>Wizard: Are you fire?<br> You: That is correct.<br>Wizard: Ha Ha, now you must answer me this...<br>Alive without breath, <br>As cold as death;<br>Never thirsty, ever drinking,<br>All in mail never clinking.<br>What is it?</fieldset>";
+      document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Wizard: Very impressive I did not think you looked like the intellectual type, I may even have some use for you.<br><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br><br>Feed me and I live, yet give me a drink and I die.<br><br>What am I?<br>Wizard: Are you fire?<br><br>You: That is correct.<br><br>Wizard: Ha Ha, now you must answer me this...<br><br>Alive without breath, <br>As cold as death;<br>Never thirsty, ever drinking,<br>All in mail never clinking.<br><br>What is it?</fieldset>";
 
       document.getElementById("picture").innerHTML = "<img src=\"images/riddle3.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">";
 
@@ -811,7 +811,7 @@
         document.getElementById("stats").innerHTML = "";
 
         
-        document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: Are you water elemental? <br><br>You: that is incorrect wizard you have lost this game of witts, now you must leave me and my girlfriend alone!<br><br>Wizard: Very well, but if I ever see you again I shall incinerate you where you stand. Come Snorg let's go.";
+        document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br>Feed me and I live, yet give me a drink and I die.<br>What am I?<br><br>Wizard: Are you water elemental? <br><br>You: that is incorrect wizard, the correct answer is fire, you have lost this game of witts, now you must leave me and my girlfriend alone!<br><br>Wizard: Very well, but if I ever see you again I shall incinerate you where you stand. Come Snorg let's go.";
 
         document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
 
@@ -819,7 +819,7 @@
         document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
           
 
-        document.getElementById("Choice1").innerHTML = "";
+        document.getElementById("Choice1").innerHTML = "<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>";
         document.getElementById("Choice2").innerHTML = "";
         document.getElementById("Choice3").innerHTML = "";
         document.getElementById("Choice4").innerHTML = "";
@@ -827,7 +827,6 @@
         document.getElementById("Choice6").innerHTML = "";  
 
         //link to start over again
-        document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
 
         scroll(0,0);
 
@@ -864,7 +863,7 @@
     document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!<br>";
       
 
-    document.getElementById("Choice1").innerHTML = "";
+    document.getElementById("Choice1").innerHTML = "<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>";
     document.getElementById("Choice2").innerHTML = "";
     document.getElementById("Choice3").innerHTML = "";
     document.getElementById("Choice4").innerHTML = "";
@@ -872,7 +871,6 @@
     document.getElementById("Choice6").innerHTML = ""; 
 
     //link to start again
-    document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
 
     scroll(0,0);
 
