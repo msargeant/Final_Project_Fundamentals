@@ -372,7 +372,7 @@
 
   function cottageChoice1(){
 
-    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>peeking in the window you see sparsly furnished living room with two chairs and a table. You also see two paintings one of a rosebud, and the other a castle. The orc and wizard soon emerge from a door in the wall which disappear before your eyes as the wizard casts a magic spell on it.</fieldset>";
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>peeking in the window you see sparsly furnished living room with two chairs and a table. You also see two paintings one of a rosebud, and the other a castle. The orc and wizard soon emerge from a door in the wall which disappear before your eyes as the wizard says the word \"dubesor\".</fieldset>";
     
     document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
 
@@ -381,12 +381,31 @@
     document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"cottageChoice1Case1();\">1. Barge in and demand entrance into the secret door. </section>";
     document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"cottageChoice1Case2();\">2. Imitate the sound of a bird to distract and confuse them.</section>";
     document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice1Case3();\">3. Go steal the horses that are tied up in the front.</section>";
-    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice1Case4();\">4. Hide and wait to see what they do.</section>";
+    document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice4();\">4. Hide and wait to see what they do.</section>";
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
  
     
   }
+  
+  function cottageChoice1Case1(){
+    document.write("<br><fieldset><strong>IV:</strong> You barge into the cottage through the front door and you demand entrance into the secret door. He says that it is sealed with a secret word and you will never find out what it is.</fieldset><br>");
+
+    combat2(hitPoints, damage, armorClass, saveVSSpell);        
+  }
+
+  function cottageChoice1Case2(){
+    document.write("<br><fieldset><strong>IV:</strong>You begin making fairly convincing bird sounds, when the wizard says<br><br>Wizard: That sounds like a red bellied finch, they are not endiginous to this area!? It is the blacksmith apprentice, Snorg get him!</fieldset><br>");
+
+    combat1(hitPoints, damage, armorClass, saveVSSpell);        
+  }  
+
+  function cottageChoice1Case3(){
+    document.write("<br><fieldset><strong>IV:</strong>As you go to untie the horses from the post, the cottage door sudenly flies open and the orc and wizard rush in and attack.</fieldset><br>");
+
+    combat2(hitPoints, damage, armorClass, saveVSSpell);        
+  } 
+
   
   function cottageChoice2(){
     document.write("<br><fieldset><strong>IV:</strong>As you go to untie the horses from the post, the cottage door sudenly flies open and the orc and wizard rush in and attack.</fieldset><br>");
@@ -409,11 +428,18 @@
 
     document.getElementById("Choice1").innerHTML = "<section id=\"Choice1\" onclick=\"door = true; cottageChoice4Case1();\">1. Enter through the door.</section>";
     document.getElementById("Choice2").innerHTML = "<section id=\"Choice2\" onclick=\"windo = true; cottageChoice4Case1();\">2. Enter through the window.</section>";
-    document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice1Case3();\">3. Continue to wait till they return.</section>";
+    document.getElementById("Choice3").innerHTML = "<section id=\"Choice3\" onclick=\"cottageChoice1Case3Case4();\">3. Continue to wait till they return.</section>";
     document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice1Case4();\"></section>";
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
       
+  }
+
+  function cottageChoice1Case3Case4(){
+    document.write("<br><fieldset><strong>IV:</strong> As you are sitting out waiting for them to return you are thinking to yourself maybe I should hurry up and try to find my girlfriend before they get back. As you are about to head into the cottage the orc and wizard return on their horses and engage you.</fieldset><br>");
+
+    combat1(hitPoints, damage, armorClass, saveVSSpell);        
+  
   }
   
   function cottageChoice4Case1(){
@@ -440,6 +466,8 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
       
+    document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
+  
   
   }
   
@@ -478,12 +506,13 @@
         document.getElementById("Choice5").innerHTML = "";
         document.getElementById("Choice6").innerHTML = "";  
         
-       
+        document.getElementById("inputBox").innerHTML = "";
+
+
         audio3.pause();
         
         audio2.play();
 
-        endGame();
         
       }else{
             
