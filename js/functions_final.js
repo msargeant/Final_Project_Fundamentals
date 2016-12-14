@@ -498,9 +498,9 @@
     
 
     guessCount = guessCount + 1;
-    
-    document.write("<input id=\"guess\" type=\"text\">");
-    document.write("<input id=\"guess\" type=\"button\" onclick=\"check();\">");
+
+    document.getElementById("Choice5").innerHTML = "<input id=\"guess\" type=\"text\">";
+    document.getElementById("Choice6").innerHTML = "<input id=\"guess\" type=\"button\" onclick=\"check();\">";  
     
     
   }
@@ -508,8 +508,9 @@
   function check(){
     var aGuess = document.getElementById("guess").value
     bGuess = aGuess.toLowerCase();
+    guessCount++;
     
-    if(guessCount <= 3){
+    if(guessCount < 3){
       if(bGuess === "rosebud"){
         //beat the game... ending screen
         document.getElementById("stats").innerHTML = "";
@@ -539,21 +540,11 @@
         scroll(0,0);
       }else{
             
-    if(door){
-    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>The door remains and is unaffected by that world. That was obviously not the right answer.</fieldset>";
-    document.getElementById("picture").innerHTML = "<img src=\"images/rosebud1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
-
-    }
-    
-    if(windo){
-    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>The door remains and is unaffected by that world. That was obviously not the right answer.</fieldset>";
-    document.getElementById("picture").innerHTML = "<img src=\"images/castle1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
-      
-    }
+    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>As you speak the word \"" + aGuess + "\" the door is unaffected. That was obviously not the right answer.<br><br>The number of failed guesses is " + guessCount + "</fieldset>";
 
     document.getElementById("narrator").innerHTML = "<h1>Guess the secret password</h1>";
 
-    guessBox();
+    document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
       }
       
       
