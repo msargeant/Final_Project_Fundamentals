@@ -57,14 +57,11 @@
   
   function endGame(){
 
-    window.scrollTo(0,document.body.scrollHeight);
 
     audio.pause();
   
     audio2.play();
       
-    alert("Congratulations you have successfully slain the orc and Wizard.  You have also successfully saved your girlfriend!  Surely the blessings of luck shine upon you this day!");
-
 
     document.write("Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!<br><br>");
 
@@ -73,14 +70,18 @@
 
     document.write("<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">");
 
+    window.scrollTo(0,document.body.scrollHeight);
+    alert("Congratulations you have successfully slain the orc and Wizard.  You have also successfully saved your girlfriend!  Surely the blessings of luck shine upon you this day!");
+
+    
     document.getElementById("Choice1").innerHTML = "";
     document.getElementById("Choice2").innerHTML = "";
     document.getElementById("Choice3").innerHTML = "";
     document.getElementById("Choice4").innerHTML = "";
     document.getElementById("Choice5").innerHTML = "";
     document.getElementById("Choice6").innerHTML = "";  
-    
-    
+  
+
 
   }
   
@@ -494,16 +495,7 @@
     scroll(0,0);
   }
   
-  function guessBox(){
-    
 
-    guessCount = guessCount + 1;
-
-    document.getElementById("Choice5").innerHTML = "<input id=\"guess\" type=\"text\">";
-    document.getElementById("Choice6").innerHTML = "<input id=\"guess\" type=\"button\" onclick=\"check();\">";  
-    
-    
-  }
   
   function check(){
     var aGuess = document.getElementById("guess").value
@@ -523,7 +515,7 @@
         document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
           
 
-        document.getElementById("Choice1").innerHTML = "";
+        document.getElementById("Choice1").innerHTML = "<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>";
         document.getElementById("Choice2").innerHTML = "";
         document.getElementById("Choice3").innerHTML = "";
         document.getElementById("Choice4").innerHTML = "";
@@ -1091,9 +1083,9 @@
      
     }
     
-    document.write("The battle is over.<br>");
+    document.write("The battle is over.<br><br>");
     if(currentHealth > 0){
-      alert("Congratulations you have successfully slain the orc and Wizard.<br>You have also successfully saved your girlfriend!<br>Surely the blessings of luck shine upon you this day!");
+      endGame();
     }else{
       death();
     }
