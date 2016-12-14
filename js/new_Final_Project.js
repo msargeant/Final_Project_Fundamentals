@@ -4,6 +4,7 @@
       var damage = 4;
       var saveVSSpell = 10;
       
+      //Declare boolean variables
       var chest = false;
       var run = false;
       var guard = false;

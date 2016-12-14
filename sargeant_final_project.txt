@@ -1,3 +1,4 @@
+
 1. PROBLEM STATEMENT: I would like to create a action adventure game based on
 dungeons & dragons where you can use a random number generator within a function
 to simulate dice and allow a player to choose their own adventure through
@@ -17,15 +18,15 @@ back story, setting, situation.
 Verbs:create, simulate, choose, start, make choices, beat the game, dying, 
 start over, defeating an enemy, continuing, prompted, given, asked
 
+
 2. Defining Diagram
 
 INPUTS: 
-  characterName
+  click
   choice
-
+  input box
 
 PROCESSING:
-  prompt for characterName
   display current hit points
   display back story
   display setting
@@ -53,7 +54,7 @@ OUTPUTS:
   display player death
   display enemy death
   display ending script
-  
+  display start over link
 
 
 
@@ -82,30 +83,32 @@ OUTPUTS:
   
   Main
   
-    initialize characterName = ""
-    initialize characterHitPoints = 0
-    initialize enemyHitPoints = 0
-    initialize choice = 0
+    Initialize characterHitPoints = 8
+    Initialize enemyHitPoints = 8
+    Initialize saveVSSpell = 10
+    Initialize armorClass = 8
+    Initialize damage = 4
     
-    prompt for characterName with "What is your character's name?"
+    Display image as link to main function/html page
+    Display starter back story
+    Display first choices
     
-    display starter back story
-    display first choices
+    Prompt for choice
     
-    prompt for choice
+    Display character stats such as hitpoint, armorClass, saveVSSpell, and damage
+    Diplay cooresponding text for the choice
+    Display cooresponding picture for the choice
     
-    diplay cooresponding text for the choice
-    
-    diplay next choice
+    Diplay next choices
     
     prompt for next decision
     
-    Display "You have beaten the game!"
+    Display ending text, picture, and start over link
     
     or
     
     Display "You have died"
-    prompt "Would you like to start over?"
+    Display text, picture, and start over link
     
   END
     
@@ -114,32 +117,91 @@ OUTPUTS:
 4. Check the Solution Algorithm
   TEST CASE 1: 
     Input Values:
+      1. click picture
+      2. click choice 1
     
     
     Expected Results:
-    
+      1. go to first page which has stats, narragion, picture(blacksmith), what do you do? text, 6 choices 
+      2. narration text for first choice, picture of orc, combat sequence, ending phrase, start over option, either an ending picture and song, or death picture and song
+      
     
     Actual Results:
+      1. go to first page which has stats, narragion, picture(blacksmith), what do you do? text, 6 choices 
+      2. narration text for first choice, picture of orc, combat sequence, ending phrase, start over option, either an ending picture and song, or death picture and song
+
     
   TEST CASE 2: 
     Input Values:
+      1. click picture
+      2. click choice 2
     
     
     Expected Results:
-    
+      1. go to first page which has stats, narration, picture(blacksmith), what do you do? text, 6 choices 
+      2. narration text for second choice, picture of wizard, combat sequence, ending phrase, start over option, either an ending picture and song, or death picture and song
+
     
     Actual Results:
+      1. go to first page which has stats, narration, picture(blacksmith), what do you do? text, 6 choices 
+      2. narration text for second choice, picture of wizard, combat sequence, ending phrase, start over option, either an ending picture and song, or death picture and song
+
     
     
   TEST CASE 3: 
     Input Values:
+      1. click picture
+      2. click choice 3
+      3. click choice 1
     
     
     Expected Results:
+      1. go to first page which has stats, narration, picture(blacksmith), what do you do? text, 6 choices 
+      2. narration text for third choice, picture of wizard2, what do you say? text,  more choices
+      3. narration text for first choice, picture of orc, combat sequence, ending phrase, start over option, either an ending picture and song, or death picture and song
     
     
     Actual Results:
+      1. go to first page which has stats, narration, picture(blacksmith), what do you do? text, 6 choices 
+      2. character stats, narration text for third choice, picture of wizard2, what do you say? text,  more choices
+      3. narration text for first choice, picture of orc, combat sequence, ending phrase, start over option, either an ending picture and song, or death picture and song
+
     
+  TEST CASE 4: 
+    Input Values:
+      1. click picture
+      2. click choice 3
+      3. click choice 2
+      4. click choice 4
+      5. click choice 2
+      6. click choice 4
+      7. click choice 1
+      8. type "castle" then click speak word
+      9. type "rosebud" then click speak word
+    
+    
+    Expected Results:
+      1. go to first page which has stats, narration, picture(blacksmith), what do you do? text, 6 choices 
+      2. character stats, narration text for third choice, picture of wizard2, what do you say? text,  more choices
+      3. character stats, narration text for second choice, picture of chest, what do you say? text,  more choices
+      4. character stats, narration text for fourth choice, picture of outside area, what do you do next? text,  more choices
+      5. character stats, narration text for second choice, picture of cottage, what do you do next? text,  more choices
+      6. character stats, narration text for fourth choice, picture of cottage, what do you do next? text,  more choices
+      7. character stats, narration text for first choice, picture of a rosebud, Guess the secret word text,  text box and "speak word" button
+      8. text in the narration section changes to "As you speak the word "castle" the door is unaffected. That was obviously not the right answer. The number of failed guesses is 1", picture of a rose, Guess the secret password text, text box and "Speak word" button
+      9. narration text, picture of ending picture, ending message, start over link
+    
+    Actual Results:
+      1. go to first page which has stats, narration, picture(blacksmith), what do you do? text, 6 choices 
+      2. character stats, narration text for third choice, picture of wizard2, what do you say? text,  more choices
+      3. character stats, narration text for second choice, picture of chest, what do you say? text,  more choices
+      4. character stats, narration text for fourth choice, picture of outside area, what do you do next? text,  more choices
+      5. character stats, narration text for second choice, picture of cottage, what do you do next? text,  more choices
+      6. character stats, narration text for fourth choice, picture of cottage, what do you do next? text,  more choices
+      7. character stats, narration text for first choice, picture of a rosebud, Guess the secret word text,  text box and "speak word" button
+      8. text in the narration section changes to "As you speak the word "castle" the door is unaffected. That was obviously not the right answer. The number of failed guesses is 1", picture of a rose, Guess the secret password text, text box and "Speak word" button
+      9. narration text, picture of ending picture, ending message, start over link
+
     
     
     
