@@ -1,3 +1,4 @@
+      //Declare global variables
       var hitPoints = 8;
       var armorClass = 8;
       var damage = 4;
@@ -14,14 +15,17 @@
       var windo = false;
       var guessCount = 0;
       
+      //Declare music globally
       var audio = new Audio('music/battleMusic5.mp3');
       var audio2 = new Audio('music/endMusic.mp3');
       var audio3 = new Audio('music/outsideMusic2.mp3');
       var audio4 = new Audio('music/townSong6.mp3');
       var audio5 = new Audio('music/deathSong1.mp3');
 
+      //start first sound track
       audio.play();
       
+      //scroll to the top of the screen done for most choice screens
       scroll(0,0);
       
     function Main(){

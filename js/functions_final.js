@@ -1,4 +1,5 @@
 
+  //Dice rolling section, functions that create random numbers based on certain dice
   function rollD20(){
     var roll = 0;
     roll = Number(roll);
@@ -54,11 +55,13 @@
     roll = Math.floor(Math.random()*100)+1;
     return roll;
   }
-  
+
+    //this function will be used for when a person beats the game
   function endGame(){
 
 
     audio.pause();
+    audio3.pause();
   
     audio2.play();
       
@@ -84,26 +87,26 @@
 
 
   }
-  
-    function death(){
-      if(audio){
-        audio.pause();
-      }
-      
-      if(audio3){
-        audio3.pause();
-        
-      }
-      audio5.play();
-      
-      document.write("<h1>You have Died</h1><br>");
-      document.write("<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>")
-      document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
-      window.scrollTo(0,document.body.scrollHeight);
+    //used when a player dies
+  function death(){
+    if(audio){
+      audio.pause();
+    }
+    
+    if(audio3){
+      audio3.pause();
+    }
+    audio5.play();
+    
+    document.write("<h1>You have Died</h1><br>");
+    document.write("<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>")
+    document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
+    window.scrollTo(0,document.body.scrollHeight);
 
-      alert("You have died!");    
+    alert("You have died!");    
   }
   
+  //this function chooses the correct dice to roll based on the player or monsters damage number
   function damageRoll(damageDie){
     
     if(damageDie === 12){
@@ -362,7 +365,7 @@
   }
   
 
-
+  //Start of the cottage section
   function cottage(){
 
       if(audio4){
@@ -496,7 +499,7 @@
   }
   
 
-  
+  //checks if text box is the correct word or not, they get three chances
   function check(){
     var aGuess = document.getElementById("guess").value
     bGuess = aGuess.toLowerCase();
@@ -713,7 +716,7 @@
   } 
   
   function choice3Case5Case4(){
-
+    //this is where the wizard makes an intelligence check to see if he can answer the riddle
     var guess = rollD20();
     guess = Number(guess);
     if((guess + 17) >= 20){
@@ -770,6 +773,7 @@
 
   
   function choice3Case5Case4Case3(){
+    //wizard must make this check to correctly answer the riddle
     var guess = rollD20();
     guess = Number(guess);
     if((guess + 18) >= 20){
@@ -864,7 +868,7 @@
     
   }
   
-  
+  //this function determines whether the player is held or not
   function wizardCastHold(save){
     var roll = 0;
     var holdEffect = false;
@@ -903,7 +907,7 @@
     
     return spellDamage;  
   }
-  
+  //wizard attack with staff
   function wizardSwingStaff(armorRating){
     var roll = 0;
     var staffDamage = 0;
@@ -926,7 +930,7 @@
   
   
   function combat1(currentHealth, weaponDamage, currentArmorClass, spellSave){
-    
+    //Declare variables
     var orcHealth = 8;
     var orcArmorClass = 4;
     var orcWeaponDamage = 6;
@@ -940,7 +944,7 @@
     var holdSpell;
     var holdCount = 0;
     
-    
+    //Setting variables to a number
     wizardHealth = Number(wizardHealth);
     orcHealth = Number(orcHealth);
     orcArmorClass = Number(orcArmorClass);
@@ -950,25 +954,15 @@
     holdEffectCount = Number(holdEffectCount);
     holdCount = Number(holdCount);
     
+    //paste in image of orc
     document.write("<img src=\"images/orc2.jpg\" alt=\"orc portrait\" width=\"300\" height=\"400\">");
-    //document.write("<p id = \"picuture\"></p>");
-    //document.getElementById("picture").innerHTML = "<img src=\"images/orc2.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">"
-
-   // document.getElementById("narrator").innerHTML = "<p>Hey I am narrator text durring the battle<p>";
-
-    //document.getElementById("Choice1").innerHTML = "<p>make a choice1?</p></font>";
-    //document.getElementById("Choice2").innerHTML = "";
-    //document.getElementById("Choice3").innerHTML = "";
-    //document.getElementById("Choice4").innerHTML = "";
-    //document.getElementById("Choice5").innerHTML = "";
-    //document.getElementById("Choice6").innerHTML = "";
   
     
-    
+    //while the orc or wizard are still alive the fight goes on
     while((currentHealth > 0 && orcHealth > 0) || (currentHealth > 0 && wizardHealth > 0)){
     
 
-      
+      //is the player's hold spell duration done?
       if(holdCount >= holdEffectCount){
         holdEffect = false;
       }
@@ -1094,6 +1088,7 @@
   }
   
   function combat2(currentHealth, weaponDamage, currentArmorClass, spellSave){
+    //Declare variables
     var orcHealth = 8;
     var orcArmorClass = 4;
     var orcWeaponDamage = 6;
@@ -1107,7 +1102,7 @@
     var holdSpell;
     var holdCount = 0;
     
-    
+    //Set variables to numbers
     wizardHealth = Number(wizardHealth);
     orcHealth = Number(orcHealth);
     orcArmorClass = Number(orcArmorClass);
@@ -1117,6 +1112,7 @@
     holdEffectCount = Number(holdEffectCount);
     holdCount = Number(holdCount);
     
+    //past in image of the wizard
     document.write("<img src=\"images/wizard4.jpg\" alt=\"orc portrait\" width=\"300\" height=\"400\">");
 
     
@@ -1125,12 +1121,13 @@
      // document.getElementById("picture").innerHTML = "<img src=\"images/wizard4.jpg\" alt=\"adventure photo\" width=\"150\" height=\"200\">"
 
 
-          
+      //check if hold should still be in effect
       if(holdCount >= holdEffectCount){
         holdEffect = false;
       }
       holdCount++;          
       
+      //check if player is held
       if(holdEffect == true){
         currentArmorClass = 10;
       }else{
