@@ -1,8 +1,24 @@
+  h1 {
+    font-size: 32pt;
+    }
 
   p {
-    font-size: 16pt;
+    font-size: 18pt;
   }
   
+  a {
+    font-size: 32pt;
+    text-decoration: none;
+  }
+
+  body { 
+    background-color: #999;
+  }
+
+  main {
+    margin-right: 50px;
+    padding-right: 50px;
+  }  
   
 
   #orcAttack {

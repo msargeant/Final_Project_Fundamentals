@@ -1,6 +1,4 @@
 
-
-      
   function rollD20(){
     var roll = 0;
     roll = Number(roll);
@@ -57,35 +55,52 @@
     return roll;
   }
   
-  function pleadSequence(){
-    var secondChoice = 0;
-    secondChoice = prompt("What choice do you make?");
-    secondChoice = Number(secondChoice);
-    return secondChoice;
-  }
-  
-  function chestChoice(){
-    var choice = 0;
-    choice = prompt("What is your action choice?");
-    choice = Number(choice);
-    return choice;
-    
-  }
-  
-  function riddleChoice(){
-    var choice = 0;
-    choice = prompt("Which number is the answer to the riddle?");
-    choice = Number(choice);
-    return choice;
-    
-  }
-  
   function endGame(){
-    document.write("Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!");
-    document.getElementById("choiceDialog").innerHTML = "";
 
+    window.scrollTo(0,document.body.scrollHeight);
+
+    audio.pause();
+  
+    audio2.play();
+      
+    alert("Congratulations you have successfully slain the orc and Wizard.  You have also successfully saved your girlfriend!  Surely the blessings of luck shine upon you this day!");
+
+
+    document.write("Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!<br><br>");
+
+    document.write("<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>")
+    
+
+    document.write("<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">");
+
+    document.getElementById("Choice1").innerHTML = "";
+    document.getElementById("Choice2").innerHTML = "";
+    document.getElementById("Choice3").innerHTML = "";
+    document.getElementById("Choice4").innerHTML = "";
+    document.getElementById("Choice5").innerHTML = "";
+    document.getElementById("Choice6").innerHTML = "";  
     
     
+
+  }
+  
+    function death(){
+      if(audio){
+        audio.pause();
+      }
+      
+      if(audio3){
+        audio3.pause();
+        
+      }
+      audio5.play();
+      
+      document.write("<h1>You have Died</h1><br>");
+      document.write("<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>")
+      document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
+      window.scrollTo(0,document.body.scrollHeight);
+
+      alert("You have died!");    
   }
   
   function damageRoll(damageDie){
@@ -132,6 +147,7 @@
   
   //New functions for new decision set up
   function choice3(){
+    
 
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>The wizard looks un-moved by your ernest pleas, but for a moment suddenly looks as if he has an idea and smiles a most devious smile.<br><br>Wizard: Give me a good reason why I should not disintigrate you where you stand?<br></fieldset>";
 
@@ -147,7 +163,8 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice3Case5();\">5. I challenge you to a game of witts!</section>";
     document.getElementById("Choice6").innerHTML = "";
   
-    
+    scroll(0,0);
+
   }
   
   function town(){
@@ -170,7 +187,8 @@
     document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"tavern();\">4. Go to the local tavern and see if they can tell you anything about the orc and wizard.</section>";
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"wander();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"breadShop();\">6. Go to the local bread maker to see if they know anything about the orc and wizard.</section>";
-    
+    scroll(0,0);
+
   }
 
   function breadShop(){
@@ -203,7 +221,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"wander();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"breadShop();\"></section>";
 
-    
+    scroll(0,0);
   }
 
   function tavern(){
@@ -237,7 +255,7 @@
     
     audio4.play();
 
-    
+    scroll(0,0);
   }
 
   function wander(){
@@ -260,6 +278,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"breadShop();\">5. Go to the local bread maker to see if they know anything about the orc and wizard.</section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"breadShop();\"></section>";
     
+    scroll(0,0);
   }
   
   function calvary(){
@@ -296,7 +315,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"wander();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\";\"></section>";
 
-    
+    scroll(0,0);
   }
   
   function blacksmithShop(){
@@ -338,6 +357,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"wander();\">5. Wander aimlessly through town wondering how you could have let this happen.</section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"breadShop();\"></section>";
 
+    scroll(0,0);
   }
   
 
@@ -368,6 +388,8 @@
     document.getElementById("Choice4").innerHTML = "<section id=\"Choice4\" onclick=\"cottageChoice4();\">4. Wait to see if there is any activity at this cottage.</section>";
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
+
+    scroll(0,0);
   }
 
   function cottageChoice1(){
@@ -385,7 +407,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
  
-    
+    scroll(0,0);
   }
   
   function cottageChoice1Case1(){
@@ -433,6 +455,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
       
+    scroll(0,0);  
   }
 
   function cottageChoice1Case3Case4(){
@@ -468,7 +491,7 @@
       
     document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
   
-  
+    scroll(0,0);
   }
   
   function guessBox(){
@@ -513,7 +536,7 @@
         
         audio2.play();
 
-        
+        scroll(0,0);
       }else{
             
     if(door){
@@ -583,6 +606,7 @@
     document.getElementById("Choice5").innerHTML = "";
     document.getElementById("Choice6").innerHTML = "";       
     
+    scroll(0,0);
   }
   
   function choice3Case2Case1(){
@@ -601,6 +625,8 @@
     damage = 12;
     armorClass = armorClass - 5;
     combat1(hitPoints, damage, armorClass, saveVSSpell);      
+    
+    scroll(0,0);
   }
   
   function choice3Case2Case2(){
@@ -622,6 +648,7 @@
     armorClass = armorClass - 5;
     combat2(hitPoints, damage, armorClass, saveVSSpell);      
     
+    scroll(0,0);
   }
     
   function choice3Case2Case3(){
@@ -656,7 +683,7 @@
     document.getElementById("Choice5").innerHTML = "";
     document.getElementById("Choice6").innerHTML = "";
 
-    
+    scroll(0,0);
   }      
 
   function choice3Case3(){
@@ -694,6 +721,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"fifth\"  onclick=\"choice3Case5Case1();\">5. Love</section>";
     document.getElementById("Choice6").innerHTML = "";       
     
+    scroll(0,0);
   }
 
   function choice3Case5Case1(){
@@ -720,7 +748,9 @@
       document.getElementById("Choice3").innerHTML = "<section id=\"third\"  onclick=\"choice3Case5Case4Case3();\">3. Secret</section>";
       document.getElementById("Choice4").innerHTML = "<section id=\"fourth\"  onclick=\"choice3Case5Case4Case1();\">4. Pleasure</section>";
       document.getElementById("Choice5").innerHTML = "<section id=\"fifth\"  onclick=\"choice3Case5Case4Case1();\">5. Anticipation</section>";
-      document.getElementById("Choice6").innerHTML = "";       
+      document.getElementById("Choice6").innerHTML = "";
+      
+      scroll(0,0);      
     }else{
       //beat the game... ending screen
       document.getElementById("stats").innerHTML = "";
@@ -741,8 +771,9 @@
       document.getElementById("Choice6").innerHTML = "";  
       
       
+      scroll(0,0);
 
-
+      
     audio.pause();
     
     audio2.play();
@@ -773,6 +804,8 @@
       document.getElementById("Choice4").innerHTML = "<section id=\"fourth\"  onclick=\"choice3Case5Case4Case3Case1();\">4. The Earth</section>";
       document.getElementById("Choice5").innerHTML = "<section id=\"fifth\"  onclick=\"choice3Case5Case4Case3Case1();\">5. Pleasure</section>";
       document.getElementById("Choice6").innerHTML = "";       
+      
+      scroll(0,0);
       }else{
         //beat the game... ending page
         document.getElementById("stats").innerHTML = "";
@@ -794,9 +827,9 @@
         document.getElementById("Choice6").innerHTML = "";  
 
         //link to start over again
-       document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
+        document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
 
-
+        scroll(0,0);
 
       audio.pause();
       
@@ -841,6 +874,7 @@
     //link to start again
     document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>");
 
+    scroll(0,0);
 
     audio.pause();
     
@@ -848,10 +882,6 @@
     
     
   }
-  
-  
-
-  
   
   
   function wizardCastHold(save){
@@ -912,18 +942,6 @@
     return staffDamage;
     
   }
-  
-  
-  function death(){
-    document.write("<h1>You have Died</h1><br>");
-    document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
-    document.write("<a href=\"New_Final_Project.html\"><h1>Start&nbsp;Over</h1></a>")
-    alert("You have died!");
-  }
-  
-  
-  
-  
   
   
   function combat1(currentHealth, weaponDamage, currentArmorClass, spellSave){
@@ -1237,9 +1255,9 @@
      
     }
     
-    document.write("The battle is over.<br>");
+    document.write("The battle is over.<br><br>");
     if(currentHealth > 0){
-      alert("Congratulations you have successfully slain the orc and Wizard.  You have also successfully saved your girlfriend!  Surely the blessings of luck shine upon you this day!");
+      endGame();
     }else{
       death();
     }
