@@ -90,10 +90,7 @@
   }
     //used when a player dies
   function death(){
-<<<<<<< HEAD
-=======
     document.write("<link href=\"../stylesheets/stylesheet.css\" rel=\"stylesheet\">")
->>>>>>> cbdbba1d31e3a7a241a7848030740150f0ff1ef0
     audio5.play();
 
     
@@ -558,13 +555,9 @@
       
     }else{
       //death from guessing wrong too many times
-<<<<<<< HEAD
+
       document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
 
-=======
->>>>>>> cbdbba1d31e3a7a241a7848030740150f0ff1ef0
-      document.write("<link href=\"../stylesheets/stylesheet.css\" rel=\"stylesheet\">")
-      
       document.write("<p>You guess wrong for the third time when a beam of magical energy springs forth from the door and disintigrates you.</p>")
       death();
     }
@@ -951,11 +944,9 @@
   
   
   function combat1(currentHealth, weaponDamage, currentArmorClass, spellSave){
-<<<<<<< HEAD
+    
     document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
-=======
-    document.write("<link href=\"../stylesheets/stylesheet.css\" rel=\"stylesheet\">")
->>>>>>> cbdbba1d31e3a7a241a7848030740150f0ff1ef0
+
 
   //Declare variables
     var orcHealth = 8;
@@ -1115,11 +1106,9 @@
   }
   
   function combat2(currentHealth, weaponDamage, currentArmorClass, spellSave){
-<<<<<<< HEAD
+
     document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
-=======
-    document.write("<link href=\"../stylesheets/stylesheet.css\" rel=\"stylesheet\">")
->>>>>>> cbdbba1d31e3a7a241a7848030740150f0ff1ef0
+
    
     //Declare variables
     var orcHealth = 8;
