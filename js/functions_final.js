@@ -65,13 +65,14 @@
   
     audio2.play();
       
+    document.write("<link href=\"../stylesheets/stylesheet.css\" rel=\"stylesheet\">")
 
     document.write("Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!<br><br>");
 
     document.write("<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>")
     
 
-    document.write("<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">");
+    document.write("<img id=\"end\" src=\"images/end2.jpg\" alt=\"beautiful scene\" width=\"500\" height=\"400\">");
 
     window.scrollTo(0,document.body.scrollHeight);
     alert("Congratulations you have successfully slain the orc and Wizard.  You have also successfully saved your girlfriend!  Surely the blessings of luck shine upon you this day!");
@@ -89,6 +90,9 @@
   }
     //used when a player dies
   function death(){
+    audio5.play();
+
+    
     if(audio){
       audio.pause();
     }
@@ -96,14 +100,13 @@
     if(audio3){
       audio3.pause();
     }
-    audio5.play();
     
     document.write("<h1>You have Died</h1><br>");
     document.write("<a href=\"index.html\"><h1>Start&nbsp;Over</h1></a>")
-    document.write("<img src=\"images/grave1.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">")
+    document.write("<img src=\"images/grave1.jpg\" alt=\"grave\" width=\"250\" height=\"333\">")
     window.scrollTo(0,document.body.scrollHeight);
-
     alert("You have died!");    
+
   }
   
   //this function chooses the correct dice to roll based on the player or monsters damage number
@@ -131,6 +134,8 @@
 
   }
   
+
+  
   function choice1(){        
     damage = 8;
     document.write("<br><fieldset><strong>II.</strong> You quickly grab the sword and engage the orc in battle!</fieldset><br>");
@@ -156,7 +161,7 @@
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>The wizard looks un-moved by your ernest pleas, but for a moment suddenly looks as if he has an idea and smiles a most devious smile.<br><br>Wizard: Give me a good reason why I should not disintigrate you where you stand?<br></fieldset>";
 
       
-    document.getElementById("picture").innerHTML = "<img src=\"images/wizard.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/wizard.jpg\" alt=\"wizard\" width=\"300\" height=\"514\">";
 
     document.getElementById("narrator").innerHTML = "";
 
@@ -181,7 +186,7 @@
     
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>II.</strong><br>You quickly without losing a beat cowardly dash out the back door.<br>The orc and the wizard take your girlfriend on a pair of horses and ride out of town.</fieldset>";
       
-    document.getElementById("picture").innerHTML = "<img src=\"images/outside1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/outside1.jpg\" alt=\"outside photo\" width=\"500\" height=\"338\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -214,7 +219,7 @@
     document.getElementById("stats").innerHTML = "Hit Points = " + hitPoints + "<br>Armor Class = " + armorClass + "<br>Save VS Spell = " + saveVSSpell + "<br>Damage = " + damage + "<br>";
 
     
-    document.getElementById("picture").innerHTML = "<img src=\"images/helmet1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/helmet1.jpg\" alt=\"decorative helmet\" width=\"500\" height=\"525\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -242,7 +247,7 @@
     document.getElementById("stats").innerHTML = "Hit Points = " + hitPoints + "<br>Armor Class = " + armorClass + "<br>Save VS Spell = " + saveVSSpell + "<br>Damage = " + damage + "<br>";
 
       
-    document.getElementById("picture").innerHTML = "<img src=\"images/tavern3.jpg\" alt=\"adventure photo\" width=\"380\" height=\"265\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/tavern3.jpg\" alt=\"two beer steins\" width=\"380\" height=\"263\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -271,7 +276,7 @@
     
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>As you are wandering through the streets feeling bad about yourself wondering how this could have happened, and considerably upset about the whole situation. You see a large disgusting rat scurrying through an alley way, but nothing of interst or value.</fieldset>";
       
-    document.getElementById("picture").innerHTML = "<img src=\"images/village4.jpg\" alt=\"adventure photo\" width=\"380\" height=\"265\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/village4.jpg\" alt=\"city street\" width=\"380\" height=\"189\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -308,7 +313,7 @@
     document.getElementById("stats").innerHTML = "Hit Points = " + hitPoints + "<br>Armor Class = " + armorClass + "<br>Save VS Spell = " + saveVSSpell + "<br>Damage = " + damage + "<br>";
 
     
-    document.getElementById("picture").innerHTML = "<img src=\"images/guard1.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/guard1.jpg\" alt=\"guard\" width=\"300\" height=\"375\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -350,7 +355,7 @@
     document.getElementById("stats").innerHTML = "Hit Points = " + hitPoints + "<br>Armor Class = " + armorClass + "<br>Save VS Spell = " + saveVSSpell + "<br>Damage = " + damage + "<br>";
 
 
-    document.getElementById("picture").innerHTML = "<img src=\"images/chest1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/chest1.jpg\" alt=\"wooden chest\" width=\"500\" height=\"363\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -382,7 +387,7 @@
 
     }
     
-    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"cottage\" width=\"500\" height=\"352\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -400,7 +405,7 @@
 
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>peeking in the window you see sparsly furnished living room with two chairs and a table. You also see two paintings one of a rosebud, and the other a castle. The orc and wizard soon emerge from a door in the wall which disappear before your eyes as the wizard says the word \"dubesor\".</fieldset>";
     
-    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"cottage\" width=\"500\" height=\"352\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -448,7 +453,7 @@
   function cottageChoice4(){
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Waiting in a well hidden spot about an hour passes when the orc and wizard exit the cottage get on their horses and ride toward town. You do not see your girlfriend with them, so she must be inside somewhere.</fieldset>";
     
-    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"adventure photo\" width=\"500\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/cottage.jpg\" alt=\"cottage\" width=\"500\" height=\"352\">";
 
     document.getElementById("narrator").innerHTML = "<h1>What do you do next?</h1>";
 
@@ -470,19 +475,22 @@
   }
   
   function cottageChoice4Case1(){
+
     
     if(door){
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Entreing through the door you see a sparsly furnished room with a table and two chairs. You see two paintings, one of a rosebud and the other of a castle. You notice footsteps leading to a barren wall. As you mutter to yourself about how do I open this door, you notice the reverberations of you voice has an effect on the door which indicates to you this must be a voice activated magical door. So if only you knew the right word you would be able to pass.</fieldset>";
-    document.getElementById("picture").innerHTML = "<img src=\"images/rosebud.jpg\" alt=\"adventure photo\" width=\"300\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/rosebud.jpg\" alt=\"rosebud\" width=\"300\" height=\"378\">";
 
     }
     
     if(windo){
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Entreing through the window you see a sparsly furnished room with a table and 2 chairs. You see two paintings, one of a rosebud and the other of a castle. You notice footsteps leading to a barren wall. As you mutter to yourself about how do I open this door, you notice the reverberations of you voice has an effect on the door which indicates to you this must be a voice activated magical door. So if only you knew the right word you would be able to pass.</fieldset>";
-    document.getElementById("picture").innerHTML = "<img src=\"images/castle1.jpg\" alt=\"adventure photo\" width=\"325\" height=\"400\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/castle1.jpg\" alt=\"castle\" width=\"325\" height=\"433\">";
       
     }
 
+
+    
     document.getElementById("narrator").innerHTML = "<h1>Guess the secret password</h1>";
 
     
@@ -493,7 +501,7 @@
     document.getElementById("Choice5").innerHTML = "<section id=\"Choice5\" onclick=\"choice4Case1Case5();\"></section>";
     document.getElementById("Choice6").innerHTML = "<section id=\"Choice6\" onclick=\"choice4Case1Case6();\"></section>";
       
-    document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
+    document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\" textarea=\"1000\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
   
     scroll(0,0);
   }
@@ -501,6 +509,7 @@
 
   //checks if text box is the correct word or not, they get three chances
   function check(){
+
     var aGuess = document.getElementById("guess").value
     bGuess = aGuess.toLowerCase();
     guessCount++;
@@ -512,7 +521,7 @@
 
         document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>As you speak the word \"rosebud\" the magic holding the door closed suddenly disipates completely. You follow a small flight of stairs which leads to your girlfriend locked in a cage. You quickly break the lock and escape.</fieldset>";
 
-        document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+        document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"beautiful sunset\" width=\"500\" height=\"400\">";
 
         
         document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
@@ -544,7 +553,12 @@
       
       
     }else{
-      document.write("You guess wrong for the third time when a beam of magical energy springs forth from the door and disintigrates you.")
+      //death from guessing wrong too many times
+      document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
+
+      document.write("<link href=\"../stylesheets/stylesheet.css\" rel=\"stylesheet\">")
+      
+      document.write("<p>You guess wrong for the third time when a beam of magical energy springs forth from the door and disintigrates you.</p>")
       death();
     }
     
@@ -581,7 +595,7 @@
     
     document.getElementById("narrator").innerHTML = "";
                 
-    document.getElementById("picture").innerHTML = "<img src=\"images/chest1.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/chest1.jpg\" alt=\"wooden chest\" width=\"500\" height=\"363\">";
 
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong>You: I know where my master keeps all of his hidden treasure.<br><br>Wizard: Now this is most intriguing, by all means lead the way blacksmith apprentice.<br><br>You lead the orc and wizard to a room near the back where there is a large chest. You open the chest, and inside there is a beautifully crafted longsword and shield, along with a sack of coins.<br>What do you do?</fieldset><br>";
 
@@ -696,7 +710,7 @@
       
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>III.</strong><br>You: I challenge you to a game of witts!<br><br>Wizard: Very well but I will go first. Answer this riddle... <br><br>What is greater than God, <br>more evil than the devil, <br>the poor have it, <br>the rich need it, <br>and if you eat it, you'll die?</fieldset>";
 
-    document.getElementById("picture").innerHTML = "<img src=\"images/riddle.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/riddle.jpg\" alt=\"fox in jester hat\" width=\"500\" height=\"386\">";
           
     document.getElementById("narrator").innerHTML = "<h1>What is your answer?</h1>";
 
@@ -723,7 +737,7 @@
                  
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: Very well done I may not destroy you after all.<br><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br><br>Who makes it, has no need of it.<br>Who buys it, has no use for it.<br>Who uses it can neither see nor feel it.<br><br>What is it?<br><br>Wizard: hmmmm.. oh why that is obviously a coffin.<br><br>You: That is correct.<br><br>Wizard: Ha Ha, now you must answer me this...<br><br>If you have me, you want to share me. <br>If you share me, you haven't got me. <br><br>What am I?</fieldset>";
 
-      document.getElementById("picture").innerHTML = "<img src=\"images/riddle22.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+      document.getElementById("picture").innerHTML = "<img src=\"images/riddle22.jpg\" alt=\"sphinx\" width=\"500\" height=\"365\">";
 
       
       document.getElementById("narrator").innerHTML = "<h1>What is your answer</h1?";
@@ -743,7 +757,7 @@
 
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>Wizard: is it Darkness? <br><br>You: that is incorrect wizard you have lost this game of witts, now you must leave me and my girlfriend alone!<br><br>Wizard: Very well, but if I ever see you again I shall incinerate you where you stand. Come Snorg let's go.</fieldset>";
 
-      document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+      document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"beautiful sunset\" width=\"500\" height=\"400\">";
 
       
       document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
@@ -780,7 +794,7 @@
                  
       document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>Wizard: Very impressive I did not think you looked like the intellectual type, I may even have some use for you.<br><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br><br>Feed me and I live, yet give me a drink and I die.<br><br>What am I?<br>Wizard: Are you fire?<br><br>You: That is correct.<br><br>Wizard: Ha Ha, now you must answer me this...<br><br>Alive without breath, <br>As cold as death;<br>Never thirsty, ever drinking,<br>All in mail never clinking.<br><br>What is it?</fieldset>";
 
-      document.getElementById("picture").innerHTML = "<img src=\"images/riddle3.jpg\" alt=\"adventure photo\" width=\"250\" height=\"350\">";
+      document.getElementById("picture").innerHTML = "<img src=\"images/riddle3.jpg\" alt=\"owl\" width=\"250\" height=\"500\">";
 
       
       document.getElementById("narrator").innerHTML = "<h1>Pick your answer</h1>";
@@ -800,7 +814,7 @@
         
         document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>You: I have answered your riddle wizard now you must answer mine. Answer me this<br>Feed me and I live, yet give me a drink and I die.<br>What am I?<br><br>Wizard: Are you water elemental? <br><br>You: that is incorrect wizard, the correct answer is fire, you have lost this game of witts, now you must leave me and my girlfriend alone!<br><br>Wizard: Very well, but if I ever see you again I shall incinerate you where you stand. Come Snorg let's go.";
 
-        document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+        document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"beautiful sunset\" width=\"500\" height=\"400\">";
 
         
         document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!";
@@ -844,7 +858,7 @@
     
     document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>You: Are you a fish?<br><br>Wizard: You are correct.<br><br>You: Okay now I have answered enough of your questions now you must leave me and my girlfriend be!<br><br>Wizard: Very well we shall leave you be, but do not let me catch in crohn wood. Let's go Snorg.";
 
-    document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"adventure photo\" width=\"500\" height=\"350\">";
+    document.getElementById("picture").innerHTML = "<img src=\"images/end2.jpg\" alt=\"beautiful sunset\" width=\"500\" height=\"400\">";
 
     
     document.getElementById("narrator").innerHTML = "Congratulations you have defeated the evil wizard, and saved your girlfriend from certain doom. You should be very proud of yourself for having survived such a heroing ordeal. WELL DONE!<br>";
@@ -930,7 +944,9 @@
   
   
   function combat1(currentHealth, weaponDamage, currentArmorClass, spellSave){
-    //Declare variables
+    document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
+
+  //Declare variables
     var orcHealth = 8;
     var orcArmorClass = 4;
     var orcWeaponDamage = 6;
@@ -955,7 +971,7 @@
     holdCount = Number(holdCount);
     
     //paste in image of orc
-    document.write("<img src=\"images/orc2.jpg\" alt=\"orc portrait\" width=\"300\" height=\"400\">");
+    document.write("<img src=\"images/orc2.jpg\" alt=\"orc portrait\" width=\"300\" height=\"382\">");
   
     
     //while the orc or wizard are still alive the fight goes on
@@ -1088,6 +1104,8 @@
   }
   
   function combat2(currentHealth, weaponDamage, currentArmorClass, spellSave){
+    document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
+   
     //Declare variables
     var orcHealth = 8;
     var orcArmorClass = 4;
@@ -1113,12 +1131,11 @@
     holdCount = Number(holdCount);
     
     //past in image of the wizard
-    document.write("<img src=\"images/wizard4.jpg\" alt=\"orc portrait\" width=\"300\" height=\"400\">");
+    document.write("<img src=\"images/wizard4.jpg\" alt=\"mad wizard with fire sword\" width=\"300\" height=\"355\">");
 
     
     while((currentHealth > 0 && orcHealth > 0) || (currentHealth > 0 && wizardHealth > 0)){
           
-     // document.getElementById("picture").innerHTML = "<img src=\"images/wizard4.jpg\" alt=\"adventure photo\" width=\"150\" height=\"200\">"
 
 
       //check if hold should still be in effect
