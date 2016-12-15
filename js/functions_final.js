@@ -74,8 +74,8 @@
 
     document.write("<img id=\"end\" src=\"images/end2.jpg\" alt=\"beautiful scene\" width=\"500\" height=\"400\">");
 
-    window.scrollTo(0,document.body.scrollHeight);
     alert("Congratulations you have successfully slain the orc and Wizard.  You have also successfully saved your girlfriend!  Surely the blessings of luck shine upon you this day!");
+    window.scrollTo(0,document.body.scrollHeight);
 
     
     document.getElementById("Choice1").innerHTML = "";
