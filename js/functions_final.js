@@ -513,11 +513,28 @@
 
     var aGuess = document.getElementById("guess").value
     bGuess = aGuess.toLowerCase();
-    guessCount++;
-    
-    if(guessCount < 3){
-      if(bGuess === "rosebud"){
-        //beat the game... ending screen
+
+
+      if(bGuess !== "rosebud"){
+        guessCount++;
+        if(guessCount < 3){
+          document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>As you speak the word \"" + aGuess + "\" the door is unaffected. That was obviously not the right answer.<br><br>The number of failed guesses is " + guessCount + "</fieldset>";
+
+          document.getElementById("narrator").innerHTML = "<h1>Guess the secret password</h1>";
+
+          document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
+        }else{
+          //death from guessing wrong too many times
+
+          document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">");
+
+          document.write("<p>You guess wrong for the third time when a beam of magical energy springs forth from the door and disintigrates you.</p>");
+          death();
+          
+        }
+
+      }else{
+        //beat the game ... ending sequence
         document.getElementById("stats").innerHTML = "";
 
         document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong>As you speak the word \"rosebud\" the magic holding the door closed suddenly disipates completely. You follow a small flight of stairs which leads to your girlfriend locked in a cage. You quickly break the lock and escape.</fieldset>";
@@ -543,27 +560,10 @@
         audio2.play();
 
         scroll(0,0);
-      }else{
-            
-    document.getElementById("narrator2").innerHTML = "<fieldset><strong>IV.</strong><br>As you speak the word \"" + aGuess + "\" the door is unaffected. That was obviously not the right answer.<br><br>The number of failed guesses is " + guessCount + "</fieldset>";
-
-    document.getElementById("narrator").innerHTML = "<h1>Guess the secret password</h1>";
-
-    document.getElementById("inputBox").innerHTML = "<input id=\"guess\" type=\"text\"><br><input id=\"guess\" type=\"submit\" value=\"Speak word\"onclick=\"check();\">";
+        
       }
-      
-      
-    }else{
-      //death from guessing wrong too many times
+  }     
 
-      document.write("<link href=\"stylesheets/stylesheet.css\" rel=\"stylesheet\">")
-
-      document.write("<p>You guess wrong for the third time when a beam of magical energy springs forth from the door and disintigrates you.</p>")
-      death();
-    }
-    
-    
-  }
 
   
   function choice5(){
