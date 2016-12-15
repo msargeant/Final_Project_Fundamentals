@@ -77,7 +77,7 @@
       
       document.getElementById("picture").innerHTML = "<img src=\"images/blacksmith.jpg\" alt=\"adventure photo\" width=\"560\" height=\"370\">";
       
-      document.getElementById("narrator").innerHTML = "<fieldset><strong>I.</strong> You are are finished working as an apprentice in your local blacksmith shop.<br>As he quenches the last peice of iron at the end of the day<br>you notice your girlfriend enter the door. <br>She hugs you, kisses your cheek,<br>and says that she is glad that you are finally done working. <br>No sooner than the final piece of metal is cooled <br>a large orc and a wizard in a red robe barge in through blacksmith shop door. <br>The orc deals a deadly blow to your master, while the wizard appears to start casting a spell.<br> The Orc turns to your girlfriend and grabs her as if he intends to take her with him...</fieldset> <br>";
+      document.getElementById("narrator").innerHTML = "<fieldset><strong>I.</strong> You are are finished working as an apprentice in your local blacksmith shop.<br>As he quenches the last piece of iron at the end of the day<br>you notice your girlfriend enter the door. <br>She hugs you, kisses your cheek,<br>and says that she is glad that you are finally done working. <br>No sooner than the final piece of metal is cooled <br>a large orc and a wizard in a red robe barge in through blacksmith shop door. <br>The orc deals a deadly blow to your master, while the wizard appears to start casting a spell.<br> The Orc turns to your girlfriend and grabs her as if he intends to take her with him...</fieldset> <br>";
       
       document.getElementById("Choice1").innerHTML = "<section id=\"first\"  onclick=\"choice1();\"><h1>What do you do? (click the text)</h1><br><br>1. Grab the sword the master just finished making and attack the orc.</section>";
       document.getElementById("Choice2").innerHTML = "<section id=\"second\" onclick=\"choice2();\">2. Grab the sword the master just finished making and attack the wizard.</section>";
@@ -87,7 +87,7 @@
       document.getElementById("Choice6").innerHTML = "<section id=\"sixth\"  onclick=\"choice6();\">6. Attack the wizard.</section>";
 
       document.getElementById("inputBox").innerHTML = "<section id=\"sixth\"  onclick=\"choice6();\"></section>";
-      
+      audio.play();
     }
       
       
